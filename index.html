@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/footer.css">
+    <title>Train Booking</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+            background-color: #e0ebeb;
+        }
+        .heading{
+            text-align:center;
+            font-size:60px;
+          } 
+          .train{
+            height: 60px;
+
+          }
+        .navbar{
+            background-color: #669999;
+          display: flex;
+          align-items: center;
+          padding: 5px 40px;
+          }
+          .flag-emoji{
+            font-size: 30px;
+            color: #fff;
+          }
+          .menus{
+            margin-left: 150px;
+            display: flex;
+            align-items: center;
+          }
+          .menu-item{
+           
+           
+            margin-right: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            color:#fff;
+           
+          }
+          .menu-item:hover{
+            color: #0055ff;
+
+          }
+          .menu-icon{
+            height: 25px;
+            width: 30px;
+            margin-right: 5px;
+            
+          }
+          .header-content{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 50px;
+            flex-wrap: wrap;
+          }
+          .celebration{
+            width: 600px;
+            border-radius: 10px;
+            border: solid 3px black;
+          }
+          .content{
+            width: 500px;
+            font-size: 20px;
+           
+          }
+
+          .train-container{
+            display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          flex-wrap:nowrap;
+          margin-bottom: 30px;
+
+          }
+          .card{
+            background-color: #c2d6d6;
+            border: solid 3px black;
+            height: 320px;
+            width: 190px;
+            border-radius: 20px;
+          }
+          .train-icon{
+            height: 104px;
+            width:fit-content;
+            margin-top: 10px;
+          margin-left: 45px;
+          
+          }
+          .text{
+            text-align:center;
+            font-size: 20px;
+            color: black;
+           
+          }
+          .text-1{
+            text-align:center;
+            font-size: 20px;
+            color: black;
+            margin-top: 20px;
+            
+          }
+         .btn{
+         
+          border: 2px solid black;
+          margin-bottom: 20px;
+          margin-left: 30px;
+          padding: 8px;
+          border-radius: 25px 0px 25px 0px;
+          background-color: #b3cccc;
+          font-size: 18px;
+          color: black;
+          cursor: pointer;
+         }
+          .btn:hover{
+            color:#ff1ac2;
+          }
+          
+
+        /* Mobile Device */
+        @media screen and (max-width: 500px) {
+          @media screen and (max-width: 500px) {
+            .celebration{
+                width: 350px;
+            }
+            .content{
+                font-size: 20px;
+            }
+            .secondary-content{
+              display: none;
+            }
+            .flag-emoji{
+              font-size: 18px;
+            }
+            .menu-text{
+              display: none;
+            }
+            .menus{
+
+              margin-left: 10px;
+            }
+            .menu-item{
+              margin-right: 13px;
+            }
+            .menu-icon{
+            height: 30px;
+            width: 30px;
+            margin-right: 5px;
+            
+          }
+          .train-icon{
+            height: 104px;
+            width:fit-content;
+            margin-top: 10px;
+          margin-left: 45px;
+          
+          }
+          .btn{
+                
+            border: 2px solid black;
+          margin-bottom: 20px;
+          margin-left: 30px;
+          padding: 8px;
+          border-radius: 25px 0px 25px 0px;
+          background-color: #b3cccc;
+          font-size: 18px;
+          color: black;
+          cursor: pointer;
+            }
+            .btn:hover{
+            color:#ff1ac2;
+          }
+          
+        
+
+        .train-container{
+          display: flex !important;
+      flex-direction: column !important;
+      justify-content:center;
+      flex-wrap:wrap;
+      /*align-items:;*/
+
+          }
+          .card{
+            background-color: #c2d6d6;
+            border: solid 3px black;
+            height: 320px;
+            width: 190px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            margin-left: 20px;
+          }
+          .train-icon{
+            height: 104px;
+            width:fit-content;
+            margin-top: 10px;
+          margin-left: 45px;
+          
+          }
+          .text{
+            text-align:center;
+            font-size: 20px;
+            color: black;
+           
+          }
+          .text-1{
+            text-align:center;
+            font-size: 20px;
+            color: black;
+            margin-top: 20px;
+          }
+            
+          }
+        
+        /* Tablet Device */
+
+        @media screen and (min-width: 501px) and (max-width:768){
+            .page-heading{
+                font-size: 45px;
+            }
+        }
+           
+        }
+        
+        /* Tablet Device */
+
+        @media screen and (min-width: 501px) and (max-width:768){
+            
+        }
+
+        /* Desktop Device */
+        @media screen and (min-width: 769px) {
+    
+        }
+    </style>
+</head>
+ <body>
+    <div class="navbar">
+        <span class="flag-emoji"> 🏳️‍🌈 Jamu Express</span>
+     
+        <div class="menus">
+         <span class="menu-item">
+             <img src="./icons/ticket.png" class="menu-icon"  alt="history">
+             <span class="menu-text">
+            Reservation
+           </span>
+         </span>
+         <span class="menu-item">
+             <img src="./icons/cancelled.png" class="menu-icon"  alt="history">
+             <span class="menu-text">
+             Cancellation
+           </span>
+         </span>
+         <span class="menu-item">
+             <img src="./icons/phone.png" class="menu-icon"  alt="history">
+             <span class="menu-text">
+             Contact-Us
+         </span>
+         </span>
+         <span class="menu-item">
+             <img src="./icons/about.png" class="menu-icon"  alt="history">
+             <span class="menu-text">
+             About Us
+         </span>
+         </span>
+         <span class="menu-item">
+             <img src="./icons/ragister.png" class="menu-icon"  alt="history">
+             <span class="menu-text">
+            Ragister 
+         </span>
+         </span>
+         <span class="menu-item">
+             <img src="./icons/profile.png" class="menu-icon"  alt="history">
+             <span class="menu-text">
+             login
+             </span>
+         </span>
+         <span class="menu-item">
+             <img src="./icons/man.png" class="menu-icon"  alt="history">
+           <span class="menu-text">
+            sign-up
+           </span>
+         </span>
+     </div>
+         </div>
+      
+        <h1
+         class="heading">Tain Bookings
+         <img src="./icons/cancelled.png" alt="tain img" class="train">
+        </h1>
+         
+     
+      
+
+
+    <div class="header-content">
+      <img src="train.jpeg"class="celebration">
+     
+      <div class="content">
+          <p>
+            Ticketing scheme, passengers get their reservation booked through internet while sitting at home and occupy their reserved seat on the basis of Electronic Reservation slip (ERS) taken out from their own computer or SMS sent by IRCTC/Railways along with the original Identity Card.
+          </p>
+          <p>
+          
+            An online booking system is a software solution that allows potential guests to self-book and pay through your website, and other channels, while giving you the best tools to run and scale your operation, all in one place
+              </p>
+      </div>
+  </div>
+       <h1 class="heading">Our Best Policy and Services</h1>
+
+  <div class="train-container">
+      <div class="card">
+          <img src="./icons/save.png"class="train-icon">
+          <p>
+          <h3 class="text">Low Price Ticket  </h3> 
+         
+        <h3 class="text-1">WE Provide you low in price Ticket and saving the Money  </h3>  
+         
+          <button class="btn"> More Info Us</button> 
+        </p>
+      </div>
+
+     
+      <div class="card">
+          <img src="./icons/wifi.png"class="train-icon">
+          <p>
+          <h3 class="text">Free Internet Service  </h3> 
+         
+        <h3 class="text-1">WE Provide you free Internet for passengers  </h3>  
+         
+          <button class="btn"> More Info Us</button> 
+        </p>
+      </div>
+     
+
+      <div class="card">
+        <img src="./icons/idea.png"class="train-icon">
+        <p>
+        <h3 class="text">Low Price Electricity  </h3> 
+       
+      <h3 class="text-1">WE Provide you Best Electricity  For passengers  </h3>  
+       
+        <button class="btn"> More Info Us</button> 
+      </p>
+    </div>
+  </div>
+  <div class="train-container">
+    <div class="card">
+      <img src="./icons/food.png"class="train-icon">
+      <p>
+      <h3 class="text">Best Dosa  </h3> 
+     
+    <h3 class="text-1">WE Provide you Masala Dosa With Ertra Chatni  </h3>  
+     
+      <button class="btn"> More Info Us</button> 
+    </p>
+  </div>  
+  <div class="card">
+    <img src="./icons/water.png"class="train-icon">
+    <p>
+    <h3 class="text">Water Bottle </h3> 
+   
+  <h3 class="text-1">WE Provide you Buy Get one Free Bottles with Best Price  </h3>  
+   
+    <button class="btn"> More Info Us</button> 
+  </p>
+</div>  
+
+<div class="card">
+  <img src="./icons/medicine.png"class="train-icon">
+  <p>
+  <h3 class="text">Medicine </h3> 
+ 
+<h3 class="text-1">WE Provide you Less price in Best Quality Medicines  </h3>  
+ 
+  <button class="btn"> More Info Us</button> 
+</p>
+</div>
+  </div>   
+
+
+
+  <div class="footer">
+    <div class="Address">
+        <img src="./img/logo.webp" alt="sample image" width="70px" height="70px" class="img-address">
+        <p class="para-foot1">Start Your Happy Journey <br>With  Us.</p>
+        
+        <a href="tel:1234567891"> 
+            <img src="./img/call.png" alt="calling image png" width="55px" height="55px" class="image-contact1">
+          </a>&nbsp; &nbsp;
+          <a href="mailto:some@gmail.com" class="no-underline"> 
+            <img src="./img/email.png" alt="email image png" width="36px" height="36px"class="image-contact1" >
+          </a>
+    </div>
+
+
+    <div class="contact-info">
+
+        <p class="para-contact">Contact-Info</p>
+        <img src="./img/location.png" alt="Location image png" width="30px" height="30px" class="image-contact">
+
+        <p class="para-foot">A.Ahilaya Nagar<br> Old Bus Stand </p>
+
+
+        <img src="./img/call.png" alt="calling image png" width="35px" height="35px" class="image-contact">
+        <p class="para-foot">
+            <a href="tel:1234567891" class="no-under-line">9322338903</a>
+        </p>
+
+
+        <img src="./img/email.png" alt="email image png" width="30px" height="30px" class="image-contact">
+        <p class="para-foot">
+            <a href="mailto:achivershub@gmail.com" class="no-under-line">ahilaya_nagar_station@gmail.com</a>
+        </p>
+     </div>
+
+
+    <div class="contact-info">
+        
+        <p class="para-contact">Quick Links</p>
+
+          <p class="quick">
+            <a href="#" class="no-under-line">About Us</a>
+        </p>
+        
+        <p class="quick"> 
+        <a href="#" class="no-under-line">Feedback</a>
+        </p>
+    
+        <p class="quick">
+        <a href="#" class="no-under-line">Maintance</a>
+        </p>
+        
+        <p class="quick">
+        <a href="#" class="no-under-line">AC-Non-Ac</a>
+        </p>
+
+        
+
+        <p class="quick">
+        <a href="#" class="no-under-line">Terms & Condition</a>
+        </p>
+
+    </div>
+
+
+    <div class="contact-info">
+        <p class="para-contact">Follow Us</p>
+
+       
+        <img src="./img/instagram.png" alt="instagram image png" width="30px" height="30px"class="image-contact">
+        <p class="para-foot">&nbsp;&nbsp;
+            <a href="#" class="no-under-line">Instagram</a>
+        
+        </p>
+
+
+        <img src="./img/communication.png" alt="facebook png image" width="30px" height="30px"class="image-contact">
+        <p class="para-foot">&nbsp;&nbsp;
+            <a href="#" class="no-under-line">Facebook</a>
+        </p>
+
+        <img src="./img/youtube.png" alt="youtube png image" width="30px" height="30px" class="image-contact">
+        <p class="para-foot">&nbsp;&nbsp;
+            <a href="#" class="no-under-line">Youtube</a>
+        </p>
+
+
+        <img src="./img/twitter.png" alt="Twitter png image" width="30px" height="30px"class="image-contact">
+        <p class="para-foot">&nbsp;&nbsp;
+            <a href="#" class="no-under-line">Twitter(X)</a>
+        </p>
+
+        <img src="./img/goverment.png" alt="Linkedin png image" width="30px" height="30px"class="image-contact">
+        <p class="para-foot">&nbsp;&nbsp;
+            <a href="#" class="no-under-line">Goverment Office</a>
+        </p>
+
+    </div>
+
+
+</div>
+</body>
+</html>
