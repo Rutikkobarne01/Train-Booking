@@ -22,9 +22,10 @@
           }
         .navbar{
             background-color: #669999;
-          display: flex;
+          display:flex;
           align-items: center;
           padding: 5px 40px;
+          
           }
           .flag-emoji{
             font-size: 30px;
@@ -215,18 +216,80 @@
             color: black;
             margin-top: 20px;
           }
+          .menu-text{
+              display: none;
+            }
+            .menus{
+
+              margin-left: 10px;
+            }
+            .menu-item{
+              margin-right: 13px;
+            }
+            .menu-icon{
+            height: 30px;
+            width: 30px;
+            margin-right: 5px;
             
+          }
+          .train-icon{
+            height: 104px;
+            width:fit-content;
+            margin-top: 10px;
+          margin-left: 45px;
+          
+          }
         }
       
         
         /* Tablet Device */
     
-        @media screen and (min-width: 501px) and (max-width:768){
+        @media screen and (min-width: 501px) and (max-width:768px){
                   
           body{
-            background-color: #ff1ac2;
+            background-color: #527a7a;
           }
+
+          .train-container{
+          display: flex;
+      flex-direction: row;
+      justify-content:center;
+      flex-wrap:wrap;
+      
+          }
+          .card{
+            background-color: #c2d6d6;
+            border: solid 3px black;
+            height: 320px;
+            width: 190px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            margin-left: 20px;
+          }
+          .navbar{
+            background-color: #669999;
+          display:flex;
+          align-items: center;
+          
         }
+        .menu-text{
+              display: none;
+            }
+            .menus{
+
+              margin-left: 10px;
+            }
+            .menu-item{
+              margin-right: 13px;
+            }
+            .menu-icon{
+            height: 30px;
+            width: 30px;
+            margin-right: 5px;
+            
+          }
+      }
+        
 
         /* Desktop Device */
         @media screen and (min-width: px) {
